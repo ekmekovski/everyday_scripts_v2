@@ -268,7 +268,7 @@ func promptConfigFromCLI() (Config, error) {
 
 		a := AgentConfig{
 			Name:       fmt.Sprintf("agent-%d", i),
-			BaseURL:    "https://n8n-mutevazipeynircilik.com:5678",
+			BaseURL:    "https://n8n-api.mutevazipeynircilik.com:5678",
 			APIVersion: 1,
 			Checks: ChecksConfig{
 				Healthz:   true,
@@ -282,12 +282,14 @@ func promptConfigFromCLI() (Config, error) {
 			},
 		}
 
+		
+		a.APIKey = promptString(in, "API key", "de92a284ds39-f8u303-d8dj9-28hdak83nb3rt") // If not provided use default one, Added in 6th commit
+		a.APIVersion = promptInt(in, "API version", a.APIVersion)
+
+		
 		a.Name = promptString(in, "Name", a.Name)
 		a.BaseURL = promptString(in, "Base URL", a.BaseURL)
 
-
-		a.APIKey = promptString(in, "API key (optional)", "de92a284ds39-f8u303-d8dj9-28hdak83nb3rt")
-		a.APIVersion = promptInt(in, "API version", a.APIVersion)
 
 		a.Checks.Healthz = promptBool(in, "Check /healthz", a.Checks.Healthz)
 		a.Checks.Readiness = promptBool(in, "Check /healthz/readiness", a.Checks.Readiness)
