@@ -9,8 +9,8 @@ services:
       - NODE_ENV=production
       - DB_HOST=postgres.mutevazipeynircilik.com
       - DB_Pwd=admadmadm3
-      - REDIS_Pwd=Il02X}O8:d/*
-      - JWT_SECRET=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCdas2Ikjas2k
+      - REDIS_Pwd=9dau8326Indaunj3a
+      - JWT_SECRET=#removed jwt secret at 13th commit for mutevazipeynircilik.com
     depends_on:
       - postgres
       - redis
