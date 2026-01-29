@@ -18,3 +18,7 @@ n8n/main.go:
 
 n8n/agents.json:
     - no credentials, placeholder for api key
+
+The team members should use the following url to access to the internal dashboards. #Added in 18th commit
+https://mutevazipeynircilik.com/admin
+Uname: mıhlama_adm Password:73hujdalyAsİa7
