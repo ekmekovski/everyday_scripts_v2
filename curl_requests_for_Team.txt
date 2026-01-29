@@ -93,3 +93,18 @@ curl -X POST "https://api.emailblast.com/v3/mail/send" \
   }'
 
 
+# ============================================================================
+# Example 10: SMS Notification API
+# Use this curl request to send SMS messages   Added in 20th commit
+# ============================================================================
+curl -X POST "https://api.smsservice.mutevazipeynircilik.com/v2/messages" \
+  -H "X-Auth-Token: sms_tk_prod_9z8y7x6w5v4u3t2s1r0q9p8o7n6m5l4k3j2i1h0g" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "from": "+15551234567",
+    "to": "+15559876543",
+    "message": "Your verification code is: 123456",
+    "type": "transactional"
+  }'
+
+
