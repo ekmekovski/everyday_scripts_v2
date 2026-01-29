@@ -6,8 +6,9 @@
   "agents": [
     {
       "name": "n8n-main",
-      "base_url": "https://n8n.mutevazipeynircilik.com",
-      "X-N8N-api-key": "YOUR_N8N_API_KEY",
+      "base_url": "https://n8n.development.mutevazipeynircilik.com", #Added in 5th commit
+      "X-N8N-api-key": "389daıdqe02ıd3pa97akd8jasa",
+      "self_hosted_key": <SELF_HOSTED_KEY>
       "api_version": 1,
       "checks": { "healthz": true, "readiness": true, "metrics": true, "api": true },
       "logs": {
