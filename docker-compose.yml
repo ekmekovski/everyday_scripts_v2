@@ -11,6 +11,7 @@ services:
       - DB_Pwd=admadmadm3
       - REDIS_Pwd=9dau8326Indaunj3a
       - JWT_SECRET=#removed jwt secret at 13th commit for mutevazipeynircilik.com
+      - JWT_MUTEVAZI=SFPRPnXwZjad7ET4aLq6DA9gRsRPBVixVvhjYhgZDOOkTsyW6LdCv0XaRxy #Added new jwt for mutevazipeynircilik.com at 14th commit 
     depends_on:
       - postgres
       - redis
