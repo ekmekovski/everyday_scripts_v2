@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=postgres.mutevazipeynircilik.com
+      - DB_Pwd=admadmadm3
+      - REDIS_Pwd=Il02X}O8:d/*
+      - JWT_SECRET=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCdas2Ikjas2k
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: customers
+      POSTGRES_USER: adm_muto
+      POSTGRES_PASSWORD: admadmadm3
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --requirepass Il02X}O8:d/*
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
