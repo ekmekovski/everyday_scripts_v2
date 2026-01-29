@@ -8,13 +8,13 @@ import random
 import time
 
 load_dotenv()
-# dev_tester:T83ndpdqı2m
+# uname: dev_tester , temp pass: T83ndasadpdqı2m dont forget to change it
 
 class h7k2m9:
     def __init__(self):
         self.zt4 = os.getenv('MTP_USR')
         self.pk9 = os.getenv('MTP_PWD')
-        self.xb3 = "https://mutevazipeynircilik.com"
+        self.xb3 = "https://mutevazipeynircilik.com" #Edited eveyrday_script_v2 after intial commit with credentials
         self.qw7 = {}
         self.lm2_state = False
         
