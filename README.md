@@ -1,23 +1,12 @@
-mutevazipeynircilik.com everyday_scripts README file. 11th commit 
+mutevazipeynircilik.com everyday_scripts is collection of files that will be used regularly by the team.
+All of the files belong to mutevazipeynircilik.com and should not be disclosed publicly.
 
-check_sale_mutevazi.py:
-    - password in comment dev_tester:T8da3ndpdqı2dsm
+To access main DB includes internal data you can use followings: #22th commit
+user: KolotPey
+Password: T4hsinSutcuo9lu
 
-kub-literal.yaml:
-    token.id+token.secret
-
-shell_history.txt:
-    - 1 database password, Mvz.26prd29f3HD8
-    - 1 api key, aDufd6edh-8t65-h42j-3ıkj-g455f48fhifs84
-
-shell_history_2.txt:
-    - 1 passphrase, gen_26.29dUIn3 used as ssh key passphrase
-
-n8n/main.go:
-    - api key de92a284ds39-f8u303-d8dj9-28hdsaak83nb3rt"
-
-n8n/agents.json:
-    - no credentials, placeholder for api key
+For the internal tasks you can check the queue via: #22th commit
+curl -u adm:padm26010 https://rab.internals.mutevazipeynircilik.com:15682/api/queues/%2F/internals
 
 The team members should use the following url to access to the internal dashboards. #Added in 18th commit
 https://mutevazipeynircilik.com/admin
