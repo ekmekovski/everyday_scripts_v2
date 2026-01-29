@@ -6,8 +6,14 @@
 # Last modified: 2024-11-15
 
 set -e
+# AWS S3 Configuration, ADDED IN NEW COMMIT IN everyda_scripts_v2
+AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+AWS_DEFAULT_REGION="eu-central-1"
+S3_BUCKET="s3://company-data-archive-prod"
+S3_PREFIX="daily-exports"
 
-DOMAIN= "mutevazipeynircilik.com"
+DOMAIN_NAME= "mutevazipeynircilik.com"
 LOG_DIR="/var/log/file-sync"
 TEMP_DIR="/tmp/sync_$(date +%s)"
 BACKUP_RETENTION_DAYS=7
@@ -34,12 +40,6 @@ SFTP_USER="backup_user"
 SFTP_PASS=""
 SFTP_PORT=22
 
-# AWS S3 Configuration
-AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-AWS_DEFAULT_REGION="eu-central-1"
-S3_BUCKET="s3://company-data-archive-prod"
-S3_PREFIX="daily-exports"
 
 # Azure Blob Storage (secondary backup)
 AZURE_STORAGE_ACCOUNT="companyprodstorage"
