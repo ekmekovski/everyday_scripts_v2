@@ -1,4 +1,4 @@
-# mutevazipeynircilik.com takımı aşağıda ki curl requestleri kullanılan 3rd party apiler için kullanabilirler
+# mutevazipeynircilik.com development takımı aşağıda ki curl requestleri kullanılan 3rd party apiler için kullanabilirler
 #Added for 19th commit
 # ============================================================================
 # Example 1: Google Custom Search API
@@ -89,6 +89,14 @@ curl -X POST "https://api.emailblast.com/v3/mail/send" \
     "content": [{
       "type": "text/html",
       "value": "<p>Thank you for your order!</p>"
+    }]
+  }'
+
+curl -X POST "https://api.customer-service.mutevazipeynircilik.com/list/users" \ #23th com
+  -H "Authorization: Bearer SG.d93ıdjmlsa83dmsd32.das77hd3ıasa" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user:.*@tahsinsutcuo.com
     }]
   }'
 
