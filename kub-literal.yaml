@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: bootstrap-token-x9p2k7
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: kubeadm
+    app.kubernetes.io/component: bootstrap-token
+    app.kubernetes.io/managed-by: scanner-fixtures
+    tenant.acme.example/domain: "acme.example"
+    environment: "staging"
+  annotations:
+    example/contact: ""
+    example/cluster-domain: "k8s.mutevazipeynircilik.com"
+    example/purpose: "fixture"
+    kubernetes.io/description: "Dummy bootstrap token for scanner tests (expired)."
+type: bootstrap.kubernetes.io/token
+immutable: true
+data:
+  token-id: eDlwMms3
+  token-secret: bTd0NGs5cTJzMXc4bjN4NQ==
+  expiration: MjAwMC0wMS0wMVQwMDowMDowMFo=
+  usage-bootstrap-authentication: dHJ1ZQ==
+  usage-bootstrap-signing: dHJ1ZQ==
+  auth-extra-groups: 
+  description: 

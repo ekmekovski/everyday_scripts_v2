@@ -1,0 +1,93 @@
+ls -la
+cd projects/
+git status
+git pull origin main
+python3 manage.py runserver
+npm install
+npm run dev
+docker ps
+docker-compose up -d
+htop
+exit
+ssh root@prod.mutevazipeynircilik.com
+ls -lh /var/log/
+tail -f /var/log/nginx/access.log
+sudo systemctl restart nginx
+cd /home/admin/backups
+ls
+tar -xzf backup_20240115.tar.gz
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+deactivate
+git add .
+git commit -m "fix: update database schema"
+git push origin feature/new-api
+cd ../monitoring-tools/
+./health_check.sh
+top
+free -h
+df -h
+netstat -tulpn | grep 8080
+kill -9 1234
+nslookup mutevazipeynircilik.com
+sudo apt update
+sudo apt upgrade -y
+wget https://releases.ubuntu.com/22.04/ubuntu-22.04.1-desktop-amd64.iso
+vim config.yaml
+nano /etc/hosts
+grep -r "ERROR" /var/log/
+find . -name "*.log" -mtime +30 -delete
+chmod 600 ~/.ssh/id_rsa
+chown www-data:www-data /var/www/html
+clear
+ls
+cd /opt/applications/
+docker logs -f container_name
+docker exec -it container_name /bin/bash
+cd /tmp
+mkdir test_deployment
+cd test_deployment/
+git clone https://github.com/mutevazip/backend.git
+cd backend/
+npm install
+npm test
+pytest
+coverage run -m pytest
+coverage backend
+cd ~
+vim .bashrc
+source .bashrc
+alias ll='ls -lah'
+alias gs='git status'
+export PATH=$PATH:/usr/local/bin
+env | grep PATH
+echo $SHELL
+ps aux | grep python
+pkill -f "python manage.py"
+screen -ls
+tmux new -s dev
+curl -I https://example.com
+ping google.com -c 4
+sqlcmd -S muto.depo.windows.net -d production -U mvz -P 'Mvz.26prd29f3HD8'
+SELECT TOP 10 * FROM orders ORDER BY created_at DESC;
+GO
+SELECT COUNT(*) FROM customers;
+GO
+exit
+git log --oneline
+git diff HEAD~1
+vim app.py
+python3 app.py
+docker build -t myapp:latest .
+docker run -d -p 8080:8080 myapp:latest
+curl localhost:8080/health
+docker ps
+cd ~/scripts/
+ls -lh
+./deploy.sh
+systemctl status nginx
+journalctl -u app -f
+crontab -l
+history
+clear

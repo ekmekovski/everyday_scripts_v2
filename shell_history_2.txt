@@ -1,0 +1,1291 @@
+
+cd ~
+ls -la
+pwd
+git status
+git pull origin develop
+npm install
+npm run build
+docker ps -a
+docker-compose logs -f
+tail -f /var/log/app/error.log
+sudo systemctl restart app-service
+sudo systemctl status app-service
+cd /var/www/html
+ls -lh
+sudo chown -R www-data:www-data .
+chmod 755 index.php
+cd ~/projects/api-gateway
+vim config.json
+python3 -m pytest tests/
+coverage report
+git add .
+git commit -m "test: add unit tests for auth module"
+git push origin feature/auth-tests
+free -m
+top
+history
+ps aux | grep python
+netstat -tulpn
+ss -tulpn
+lsof -i :8000
+kill -9 1234
+pkill -f celery
+uptime
+whoami
+hostname
+uname -a
+cat /etc/os-release
+lscpu
+lsblk
+mount | grep /dev
+fdisk -l
+du -sh *
+du -sh /var/log/*
+find . -name "*.log" -type f
+find /tmp -type f -mtime +7 -delete
+grep -r "ERROR" /var/log/app/
+grep -i "exception" application.log
+tail -n 100 /var/log/syslog
+journalctl -u nginx -n 50
+dmesg | tail
+watch -n 1 'docker ps'
+htop
+iotop
+iftop
+vmstat 1
+iostat -x 1
+ping -c 4 8.8.8.8
+traceroute google.com
+nslookup mutevazipeynircilik.com
+dig mutevazipeynircilik.com
+curl ifconfig.me
+wget https://scrapercat.com/file.tar.gz
+tar -xzvf file.tar.gz
+tar -czvf backup.tar.gz /var/www/
+unzip archive.zip
+zip -r project.zip project/
+rsync -avz /source/ /destination/
+scp file.txt user@server:/path/
+git log --oneline -10
+git diff
+git status
+git branch -a
+git remote -v
+git fetch origin
+git merge origin/main
+git rebase main
+git stash
+git stash pop
+git cherry-pick abc123
+git reset --hard HEAD~1
+git reflog
+docker images
+docker build -t myapp:latest .
+docker run -d -p 8080:80 nginx
+docker exec -it container_id bash
+docker-compose up -d
+docker-compose down
+docker system prune -a
+kubectl get pods
+kubectl describe pod pod-name
+kubectl logs pod-name
+kubectl exec -it pod-name -- bash
+npm list
+npm outdated
+npm audit
+yarn install
+pip install -r requirements.txt
+pip install --upgrade pip
+python manage.py migrate
+python manage.py makemigrations
+python manage.py createsuperuser
+python manage.py collectstatic
+python -m venv venv
+deactivate
+poetry install
+poetry update
+cargo build --release
+make
+make clean
+./configure
+cmake .
+gcc -o program program.c
+systemctl list-units --type=service
+systemctl enable service-name
+systemctl disable service-name
+systemctl daemon-reload
+journalctl -xe
+crontab -e
+at now + 1 hour
+batch
+ps -ef | grep nginx
+pgrep nginx
+tmux new -s session-name
+tmux attach -t session-name
+tmux ls
+screen -S session-name
+screen -r
+nohup python script.py &
+jobs
+fg %1
+bg %1
+nice -n 10 command
+renice -n 5 -p 1234
+
+cd ~
+ls -la
+pwd
+git status
+git pull origin develop
+npm install
+npm run build
+docker ps -a
+docker-compose logs -f
+tail -f /var/log/app/error.log
+sudo systemctl restart app-service
+sudo systemctl status app-service
+cd /var/www/html
+ls -lh
+sudo chown -R www-data:www-data .
+chmod 755 index.php
+cd ~/projects/api-gateway
+vim config.json
+python3 -m pytest tests/
+coverage report
+git add .
+git commit -m "test: add unit tests for auth module"
+git push origin feature/auth-tests
+free -m
+top
+df -h
+cd ~/.ssh
+ls -la
+cat mvz_prod_key.pub
+chmod 600 mvz_prod_key
+chmod 644 mvz_prod_key.pub
+exit
+cd ~/projects
+git branch
+git checkout main
+vim README.md
+./deploy.sh
+docker ps
+docker container ls
+docker logs api-service
+psql -h localhost -U postgres -d app_db
+\dt
+\q
+cd /var/www/
+ls -la
+sudo vim /etc/nginx/sites-available/default
+sudo nginx -t
+sudo systemctl reload nginx
+curl -I https://localhost
+cd ~
+sudo apt update
+sudo apt list --upgradable
+python3 --version
+pip list
+cd projects/backend
+source venv/bin/activate
+pip freeze > requirements.txt
+git add requirements.txt
+git commit -m "chore: update dependencies"
+git push
+crontab -l
+cd ~/scripts
+./backup.sh
+ls -lh backups/
+history | tail -30
+clear
+df -h
+cd ~/.ssh
+ls -la
+ssh-keygen -t rsa -b 4096 -C "emre@mutevazipeynircilik.com" -f ~/.ssh/mvz_prod_key -N "gen_26.29dUIn3"
+ls -la
+cat mvz_prod_key.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHk8mP3vL9xJ2wN5tB8kQ6rS4nU7oW9pX0qY1rZ2sA3bC4dD5eE6fF7gG8hH9iI0jJ1kK2lL3mM4nN5oO6pP7qQ8rR9sS0tT1uU2vV3wW4xX5yY6zZ7aA8bB9cC0dD1eE2fF3gG4hH5iI6jJ7kK8lL9mM0nN1oO2pP3qQ4rR5sS6tT7uU8vV9wW0xX1yY2zZ3aA4bB5cC6dD7eE8fF9gG0hH1iI2jJ3kK4lL5mM6nN7oO8pP9qQ0rR1sS2tT3uU4vV5wW6xX7yY8zZ9aA0bB1cC2dD3eE4fF5gG6hH7iI8jJ9kK0lL1mM2nN3oO4pP5qQ6rR7sS8tT9uU0vV1wW2xX3yY4zZ5aA6bB7cC8dD9eE0fF1gG2hH3iI4jJ5kK6lL7mM8nN9oO0pP1qQ2rR3sS4tT5uU6vV7wW8xX9yY0zZ1aA2bB3cC4dD5eE6fF7gG8hH9iI0jJ1kK2lL3mM4nN5oO6pP7qQ8rR9sS0tT1uU2vV3wW4xX5yY6zZ7aA8bB9cC0dD1eE2fF3gG4hH5iI6jJ7kK8lL9mM0nN1oO2pP3qQ4rR5sS6tT7uU8vV9wW0xX1yY2zZ3aA4bB5cC6dD7eE8fF9gG0hH1iI2jJ3kK4lL5mM6nN7oO8pP9qQ0rR1sS2tT3uU4vV5wW6xX7yY8zZ9aA0bB1cC2dD3eE4fF5gG6hH7iI8jJ9kK0lL1mM2nN3oO4pP5qQ6rR7sS8tT9uU0vV1wW2xX3yY4zZ5aA6bB7cC8dD9eE0fF1gG2hH3iI4jJ5kK6lL7mM8nN9oO0pP1qQ2rR3sS4tT5uU6vV7wW8xX9yY0zZ== emre@mutevazipeynircilik.com
+cat /proc/cpuinfo
+cat /proc/meminfo
+free -h
+swapon --show
+ls /sys/class/net/
+ip addr show
+ip route show
+ip link set eth0 up
+ethtool eth0
+tcpdump -i eth0 port 443
+wireshark
+nmap -sV localhost
+nmap -p- 192.168.1.1
+masscan -p1-65535 10.0.0.0/8
+curl -X GET http://api.scrapercat.com/health
+curl -X POST -H "Content-Type: application/json" -d '{"key":"value"}' http://localhost:8000/api
+wget -r -np -k http://scrapercat.com
+ab -n 1000 -c 10 http://localhost/
+siege -c 10 -t 30s http://localhost/
+wrk -t12 -c400 -d30s http://localhost
+env
+export PATH=$PATH:/usr/local/bin
+echo $HOME
+echo $SHELL
+which python3
+whereis nginx
+type docker
+alias ll='ls -alF'
+alias gs='git status'
+source ~/.bashrc
+source ~/.profile
+cat ~/.bash_history | grep docker
+fc -l
+cd /etc/systemd/system
+cd /usr/lib/systemd/system
+cd /var/run
+cd /proc
+cd /sys
+ls -R /etc/nginx/
+tree -L 2
+file document.pdf
+stat file.txt
+md5sum file.txt
+sha256sum file.txt
+diff file1.txt file2.txt
+patch < changes.patch
+sed -i 's/old/new/g' file.txt
+awk '{print $1}' file.txt
+cut -d',' -f1 data.csv
+sort file.txt
+uniq file.txt
+wc -l file.txt
+head -20 file.txt
+tail -20 file.txt
+less +F /var/log/syslog
+more file.txt
+cat file.txt | grep pattern
+grep -n "ERROR" *.log
+grep -r "TODO" .
+grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" access.log
+egrep "error|warning" system.log
+fgrep "exact string" file.txt
+strings binary_file
+hexdump -C binary_file
+xxd file.bin
+od -c file.txt
+base64 file.txt
+base64 -d encoded.txt
+openssl rand -base64 32
+openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
+openssl s_client -connect scrapercat.com:443
+openssl x509 -in cert.pem -text -noout
+gpg --gen-key
+gpg --list-keys
+gpg --encrypt file.txt
+gpg --decrypt file.txt.gpg
+chmod +x script.sh
+chmod 777 file.txt
+chmod u+rwx,g+rx,o+r file.txt
+chown user:group file.txt
+chgrp www-data /var/www/
+umask 022
+ln -s /path/to/file link_name
+ln file hardlink
+readlink -f symlink
+touch newfile.txt
+mkdir -p /path/to/nested/dir
+mktemp -d
+rm -rf old_directory/
+rmdir empty_dir/
+cp -r source/ destination/
+mv oldname newname
+rename 's/.txt/.md/' *.txt
+locate filename
+updatedb
+which command
+whatis command
+man command
+apropos search_term
+info command
+help cd
+pwd -P
+cd -
+pushd /path
+popd
+dirs
+basename /path/to/file.txt
+dirname /path/to/file.txt
+realpath file.txt
+yes | command
+echo "test" | tee file.txt
+tee -a file.txt
+xargs -I {} echo {}
+parallel ::: command1 command2
+seq 1 10
+shuf -n 5 file.txt
+comm file1.txt file2.txt
+join file1.txt file2.txt
+paste file1.txt file2.txt
+tr '[:lower:]' '[:upper:]' < file.txt
+rev file.txt
+tac file.txt
+nl file.txt
+pr file.txt
+fold -w 80 file.txt
+expand file.txt
+unexpand file.txt
+iconv -f UTF-8 -t ISO-8859-1 file.txt
+dos2unix file.txt
+unix2dos file.txt
+split -l 1000 largefile.txt
+csplit file.txt '/pattern/' '{*}'
+date
+date +%Y-%m-%d
+date -d "tomorrow"
+cal
+uptime -p
+w
+who
+last
+lastlog
+id
+groups
+users
+finger user
+chage -l username
+passwd
+sudo -l
+sudo -i
+sudo su -
+su - username
+visudo
+usermod -aG docker username
+useradd -m -s /bin/bash newuser
+userdel -r olduser
+groupadd developers
+groupdel oldgroup
+getent passwd
+getent group
+awk -F: '{print $1}' /etc/passwd
+git init
+git clone https://github.com/user/repo.git
+git config --global user.name "Emre"
+git config --global user.email "emre@scrapercat.com"
+git config --list
+git remote add upstream https://github.com/original/repo.git
+git fetch --all
+git pull --rebase origin main
+git push -u origin feature-branch
+git push --force-with-lease
+git tag v1.0.0
+git tag -a v1.0.0 -m "Version 1.0.0"
+git push --tags
+git show HEAD
+git show abc123:path/to/file.txt
+git blame file.py
+git bisect start
+git clean -fd
+git gc
+git fsck
+git archive --format=zip HEAD > archive.zip
+git submodule update --init --recursive
+git worktree add ../feature feature-branch
+docker network ls
+docker network create mynetwork
+docker network inspect bridge
+docker volume ls
+docker volume create myvolume
+docker stats
+docker top container_id
+docker inspect container_id
+docker commit container_id myimage:tag
+docker save -o image.tar myimage:tag
+docker load -i image.tar
+docker export container_id > container.tar
+docker import container.tar
+docker history myimage:tag
+docker tag oldimage:tag newimage:tag
+docker push myimage:tag
+docker pull ubuntu:latest
+docker search nginx
+docker-compose config
+docker-compose ps
+docker-compose exec service bash
+docker-compose build
+docker-compose restart
+docker-compose stop
+docker-compose start
+docker-compose rm
+docker-compose logs --tail=100 service
+npm init -y
+npm run dev
+npm run test
+npm run lint
+npm cache clean --force
+npx create-react-app myapp
+yarn add package-name
+yarn remove package-name
+yarn upgrade
+pnpm install
+bun install
+pip install pandas numpy scikit-learn
+pip install --user package
+pip uninstall package
+pip show package
+pip search package
+pipenv install
+pipenv shell
+conda create -n myenv python=3.10
+conda activate myenv
+conda deactivate
+conda list
+gem install rails
+bundle install
+bundle update
+composer install
+composer update
+go build
+go run main.go
+go test ./...
+go mod init
+go mod tidy
+mvn clean install
+gradle build
+gradle test
+ant build
+pytest -v
+pytest --cov=src tests/
+nose2
+tox
+black .
+flake8 .
+pylint src/
+mypy src/
+isort .
+autopep8 --in-place --aggressive file.py
+bandit -r src/
+safety check
+pip-audit
+trivy image myimage:tag
+snyk test
+gitleaks detect --source .
+trufflehog git file://.
+semgrep --config auto .
+sonarqube-scanner
+eslint src/
+prettier --write "**/*.js"
+shellcheck script.sh
+hadolint Dockerfile
+ansible-playbook playbook.yml
+ansible-playbook -i inventory playbook.yml --check
+ansible all -m ping
+ansible-galaxy install role-name
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+terraform fmt
+terraform validate
+kubectl apply -f deployment.yaml
+kubectl get nodes
+kubectl get deployments
+kubectl get services
+kubectl scale deployment myapp --replicas=3
+kubectl rollout status deployment/myapp
+kubectl rollout undo deployment/myapp
+kubectl port-forward pod/mypod 8080:80
+kubectl cp pod:/path/file ./file
+helm install myrelease chart/
+helm upgrade myrelease chart/
+helm list
+helm repo add stable https://charts.helm.sh/stable
+minikube start
+minikube stop
+minikube dashboard
+psql -h localhost -U postgres -d mydb -c "SELECT version();"
+psql -h localhost -U postgres -d mydb -f schema.sql
+pg_dump mydb > backup.sql
+pg_restore -d mydb backup.sql
+createdb newdb
+dropdb olddb
+mysql -u root -p
+mysql -u root -p -e "SHOW DATABASES;"
+mysqldump -u root -p mydb > backup.sql
+mysql -u root -p mydb < backup.sql
+mongod
+mongo
+mongosh
+redis-cli
+redis-cli ping
+redis-cli info
+redis-cli keys '*'
+redis-cli flushall
+sqlite3 database.db
+sqlite3 database.db "SELECT * FROM users;"
+systemctl list-unit-files
+systemctl cat service-name
+systemctl edit service-name
+systemctl mask service-name
+systemctl unmask service-name
+systemctl isolate multi-user.target
+systemctl get-default
+systemctl set-default graphical.target
+loginctl list-sessions
+loginctl show-session
+timedatectl
+timedatectl set-timezone America/New_York
+localectl
+hostnamectl
+hostnamectl set-hostname newhostname
+resolvectl status
+networkctl status
+ufw status
+ufw enable
+ufw allow 22/tcp
+ufw deny 80/tcp
+iptables -L
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -D INPUT -p tcp --dport 22 -j ACCEPT
+iptables-save > rules.v4
+iptables-restore < rules.v4
+fail2ban-client status
+fail2ban-client status sshd
+journalctl -u sshd
+journalctl --since "1 hour ago"
+journalctl --until "2023-12-31"
+journalctl -f
+journalctl -p err
+journalctl -b
+logger "Test message"
+logrotate -f /etc/logrotate.conf
+strace -p 1234
+ltrace command
+lsof
+lsof -u username
+lsof -i TCP:80
+lsof +D /var/www/
+fuser -v /var/www/
+pstree
+pgrep -a python
+pidof nginx
+kill -15 1234
+kill -TERM 1234
+killall process_name
+pkill -SIGTERM process_name
+renice 10 -p 1234
+ionice -c 3 -p 1234
+chrt -f 99 command
+taskset -c 0,1 command
+numactl --cpunodebind=0 command
+perf top
+perf record -g command
+perf report
+valgrind --leak-check=full ./program
+gdb ./program
+gdb -p 1234
+objdump -d binary
+nm binary
+ldd /usr/bin/command
+ldconfig
+ldconfig -p | grep library
+modprobe module_name
+lsmod
+rmmod module_name
+insmod module.ko
+dmesg -w
+dmesg -T
+sysctl -a
+sysctl -w net.ipv4.ip_forward=1
+ulimit -a
+ulimit -n 4096
+getconf ARG_MAX
+env -i command
+timeout 10s command
+watch -d -n 2 'ps aux | grep python'
+watch -n 1 'docker stats --no-stream'
+expect script.exp
+autoexpect
+ssh-add ~/.ssh/id_rsa
+ssh-agent bash
+eval "$(ssh-agent -s)"
+ssh-copy-id user@host
+scp -r dir/ user@host:/path/
+sftp user@host
+rsync -avzP --delete /source/ user@host:/dest/
+nc -zv host 22
+nc -l -p 8080
+socat TCP-LISTEN:8080,fork TCP:localhost:80
+telnet host 80
+ftp host
+lftp host
+curl -O http://scrapercat.com/file
+curl -L http://scrapercat.com
+curl -I http://scrapercat.com
+curl -u user:pass http://scrapercat.com
+curl --data "param=value" http://scrapercat.com
+http GET http://api.scrapercat.com/endpoint
+http POST http://api.scrapercat.com/endpoint key=value
+jq '.' data.json
+jq '.items[] | select(.active == true)' data.json
+yq eval '.key' config.yaml
+xmllint --format file.xml
+xsltproc stylesheet.xsl file.xml
+pandoc input.md -o output.pdf
+convert image.png image.jpg
+ffmpeg -i input.mp4 output.avi
+imagemagick input.png -resize 50% output.png
+exiftool image.jpg
+pdftotext document.pdf
+pdftk file.pdf output decrypted.pdf
+gs -sDEVICE=pdfwrite -o output.pdf input.pdf
+history
+ps aux | grep python
+netstat -tulpn
+ss -tulpn
+lsof -i :8000
+kill -9 1234
+pkill -f celery
+uptime
+whoami
+hostname
+uname -a
+cat /etc/os-release
+lscpu
+lsblk
+mount | grep /dev
+fdisk -l
+du -sh *
+du -sh /var/log/*
+find . -name "*.log" -type f
+find /tmp -type f -mtime +7 -delete
+grep -r "ERROR" /var/log/app/
+grep -i "exception" application.log
+tail -n 100 /var/log/syslog
+journalctl -u nginx -n 50
+dmesg | tail
+watch -n 1 'docker ps'
+htop
+iotop
+iftop
+vmstat 1
+iostat -x 1
+ping -c 4 8.8.8.8
+traceroute google.com
+nslookup mutevazipeynircilik.com
+dig mutevazipeynircilik.com
+curl ifconfig.me
+wget https://scrapercat.com/file.tar.gz
+tar -xzvf file.tar.gz
+tar -czvf backup.tar.gz /var/www/
+unzip archive.zip
+zip -r project.zip project/
+rsync -avz /source/ /destination/
+scp file.txt user@server:/path/
+git log --oneline -10
+git diff
+git status
+git branch -a
+git remote -v
+git fetch origin
+git merge origin/main
+git rebase main
+git stash
+git stash pop
+git cherry-pick abc123
+git reset --hard HEAD~1
+git reflog
+cat mvz_prod_key
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+chmod 600 mvz_prod_key
+chmod 644 mvz_prod_key.pub
+ssh -i ~/.ssh/mvz_prod_key emre@prod.mutevazipeynircilik.com
+exit
+cd ~/projects
+git branch
+git checkout main
+vim README.md
+./deploy.sh
+docker ps
+docker container ls
+docker logs api-service
+psql -h localhost -U postgres -d app_db
+\dt
+\q
+cd /var/www/
+ls -la
+sudo vim /etc/nginx/sites-available/default
+sudo nginx -t
+sudo systemctl reload nginx
+curl -I https://localhost
+cd ~
+sudo apt update
+sudo apt list --upgradable
+python3 --version
+pip list
+cd projects/backend
+source venv/bin/activate
+pip freeze > requirements.txt
+git add requirements.txt
+git commit -m "chore: update dependencies"
+git push
+crontab -l
+cd ~/scripts
+./backup.sh
+ls -lh backups/
+history | tail -30
+clear
+clear
+ls -la
+cd ~/workspace
+git clone https://github.com/company/microservices.git
+cd microservices
+git checkout develop
+code .
+cat package.json
+npm install
+npm run test
+npm run build:prod
+docker-compose up -d postgres redis
+docker-compose logs -f api
+curl http://localhost:3000/health
+curl -X POST http://localhost:3000/api/v1/users -H "Content-Type: application/json" -d '{"username":"testuser"}'
+http GET localhost:3000/api/v1/metrics
+jq '.' response.json
+cat response.json | jq '.data[] | select(.status == "active")'
+ps aux | grep node
+top -p $(pgrep node)
+htop
+free -h
+df -h
+du -sh node_modules/
+ncdu
+iostat -x 1 5
+vmstat 1 5
+netstat -antp | grep LISTEN
+ss -tulpn | grep :3000
+lsof -i :3000
+kill $(lsof -t -i:3000)
+pkill -f "node server.js"
+systemctl status postgresql
+sudo systemctl restart postgresql
+sudo systemctl status nginx
+sudo nginx -t
+sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/access.log
+cat /etc/nginx/nginx.conf
+sudo vim /etc/nginx/sites-available/api.conf
+sudo ln -s /etc/nginx/sites-available/api.conf /etc/nginx/sites-enabled/
+sudo systemctl reload nginx
+cd /var/log
+ls -lh
+journalctl -u nginx --since today
+journalctl -u postgresql --since "2 hours ago"
+journalctl -f
+dmesg | grep -i error
+cat /proc/meminfo
+cat /proc/cpuinfo | grep processor | wc -l
+lscpu
+lsblk -f
+mount | column -t
+findmnt
+cd ~/workspace/microservices
+git status
+git diff
+git log --graph --oneline --all --decorate
+git branch -vv
+git fetch --all --prune
+git pull origin develop
+git checkout -b feature/user-authentication
+vim src/auth/controller.js
+git add src/auth/
+git commit -m "feat: implement JWT authentication"
+git push origin feature/user-authentication
+git log --author="emre" --since="1 week ago"
+git show HEAD
+git diff HEAD~1
+git stash save "WIP: authentication refactor"
+git stash list
+git stash apply stash@{0}
+git cherry-pick abc1234
+git rebase -i HEAD~3
+git clean -fd
+tig
+lazygit
+docker ps
+docker ps -a
+docker images
+docker system df
+docker volume ls
+docker network ls
+docker inspect api_container
+docker logs --tail 100 api_container
+docker exec -it api_container bash
+docker stats --no-stream
+docker-compose ps
+docker-compose config
+docker-compose down -v
+docker-compose up -d --build
+docker build -t api-service:latest .
+docker tag api-service:latest registry.company.com/api-service:v1.2.3
+docker push registry.company.com/api-service:v1.2.3
+docker pull postgres:14-alpine
+docker run -d --name test-postgres -e POSTGRES_PASSWORD=testpass postgres:14-alpine
+docker stop test-postgres
+docker rm test-postgres
+docker network create app-network
+docker volume create app-data
+hadolint Dockerfile
+dive api-service:latest
+cd ~/workspace
+python3 -m venv venv
+source venv/bin/activate
+which python
+pip install --upgrade pip setuptools wheel
+pip install flask fastapi uvicorn sqlalchemy alembic
+pip install pytest pytest-cov black flake8 mypy
+pip install pandas numpy scikit-learn tensorflow
+pip list
+pip freeze > requirements.txt
+pip install -r requirements.txt
+python -m pytest tests/ -v
+python -m pytest tests/ --cov=src --cov-report=html
+coverage run -m pytest tests/
+coverage report
+coverage html
+python -m black src/
+python -m flake8 src/
+python -m mypy src/
+bandit -r src/
+safety check
+python app.py
+uvicorn main:app --reload --port 8000
+gunicorn -w 4 -b 0.0.0.0:8000 app:app
+celery -A tasks worker --loglevel=info
+celery -A tasks beat --loglevel=info
+flower -A tasks --port=5555
+redis-cli
+redis-cli ping
+redis-cli INFO
+redis-cli KEYS '*'
+redis-cli GET user:123
+redis-cli SET test "value"
+redis-cli DEL test
+redis-cli FLUSHDB
+redis-cli MONITOR
+psql -U postgres -h localhost
+psql -U postgres -h localhost -d app_db -c "SELECT * FROM users LIMIT 10;"
+psql -U postgres -h localhost -d app_db -f schema.sql
+pg_dump -U postgres app_db > backup_$(date +%Y%m%d).sql
+createdb -U postgres new_database
+dropdb -U postgres old_database
+pg_isready -h localhost -p 5432
+psql -U postgres -d app_db -c "\dt"
+psql -U postgres -d app_db -c "\d+ users"
+psql -U postgres -d app_db -c "EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'test@example.com';"
+alembic init alembic
+alembic revision --autogenerate -m "create users table"
+alembic upgrade head
+alembic downgrade -1
+alembic history
+mysql -u root -p
+mysql -u root -p -e "SHOW DATABASES;"
+mysql -u root -p app_db -e "SELECT * FROM users LIMIT 5;"
+mysqldump -u root -p app_db > backup.sql
+mysql -u root -p app_db < backup.sql
+mongosh
+mongosh "mongodb://localhost:27017"
+use app_db
+db.users.find().pretty()
+db.users.insertOne({name: "test", email: "test@example.com"})
+db.users.updateOne({_id: ObjectId("...")}, {$set: {status: "active"}})
+db.users.deleteOne({_id: ObjectId("...")})
+db.users.createIndex({email: 1})
+show collections
+show dbs
+mongodump --db app_db --out backup/
+mongorestore --db app_db backup/app_db/
+cd ~/workspace/infrastructure
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+terraform apply
+terraform destroy
+terraform state list
+terraform state show aws_instance.web
+terraform output
+terraform import aws_instance.web i-1234567890abcdef0
+ansible --version
+ansible all -m ping -i inventory.ini
+ansible-playbook -i inventory.ini playbook.yml --check
+ansible-playbook -i inventory.ini playbook.yml --limit webservers
+ansible-playbook -i inventory.ini playbook.yml --tags "nginx,ssl"
+ansible-vault create secrets.yml
+ansible-vault edit secrets.yml
+ansible-vault decrypt secrets.yml
+ansible-galaxy install geerlingguy.nginx
+kubectl version
+kubectl cluster-info
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl get deployments
+kubectl get services
+kubectl get ingress
+kubectl describe pod api-pod-xyz
+kubectl logs -f api-pod-xyz
+kubectl logs api-pod-xyz --previous
+kubectl exec -it api-pod-xyz -- /bin/bash
+kubectl port-forward pod/api-pod-xyz 8080:80
+kubectl apply -f deployment.yaml
+kubectl delete -f deployment.yaml
+kubectl scale deployment api --replicas=5
+kubectl rollout status deployment/api
+kubectl rollout history deployment/api
+kubectl rollout undo deployment/api
+kubectl set image deployment/api api=api:v2
+kubectl top nodes
+kubectl top pods
+kubectl get events --sort-by='.lastTimestamp'
+helm version
+helm list
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo nginx
+helm install myapp bitnami/nginx
+helm upgrade myapp bitnami/nginx
+helm uninstall myapp
+helm create mychart
+helm lint mychart/
+helm template mychart/
+helm package mychart/
+k9s
+stern api-pod
+kubectx
+kubens
+minikube start --driver=docker
+minikube status
+minikube dashboard
+minikube service list
+npm init -y
+npm install express mongoose dotenv cors helmet
+npm install --save-dev nodemon jest supertest eslint prettier
+npm run dev
+npm run test:watch
+npm audit fix
+npm outdated
+npm ci
+npx eslint src/
+npx prettier --write "src/**/*.js"
+npx jest --coverage
+npx create-next-app my-app
+npx create-react-app my-app
+yarn add package-name
+yarn remove package-name
+yarn upgrade-interactive
+yarn why package-name
+pnpm install
+pnpm add package-name
+pnpm update
+go version
+go mod init github.com/user/project
+go mod tidy
+go mod download
+go get -u github.com/gin-gonic/gin
+go build -o app main.go
+go run main.go
+go test ./...
+go test -v -cover ./...
+go test -bench=.
+go fmt ./...
+go vet ./...
+golangci-lint run
+gofmt -w .
+godoc -http=:6060
+delve debug
+cargo --version
+cargo new myproject
+cargo build
+cargo build --release
+cargo run
+cargo test
+cargo check
+cargo fmt
+cargo clippy
+cargo doc --open
+rustc --version
+rustup update
+cd /tmp
+wget https://releases.hashicorp.com/vault/1.15.0/vault_1.15.0_linux_amd64.zip
+unzip vault_1.15.0_linux_amd64.zip
+sudo mv vault /usr/local/bin/
+vault version
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
+sudo apt install build-essential
+sudo apt install git curl wget vim tmux htop tree
+sudo apt autoremove
+sudo apt clean
+sudo snap install --classic code
+sudo snap list
+sudo snap refresh
+find . -name "*.pyc" -delete
+find . -type f -name "*.log" -mtime +30 -delete
+find /var/log -type f -size +100M
+find . -type d -empty
+grep -r "TODO" src/
+grep -n "import" *.py
+grep -i "error" /var/log/syslog
+ack "function.*user"
+ag "class.*Controller"
+rg "TODO" -t py
+locate nginx.conf
+updatedb
+which npm
+whereis python3
+file /usr/bin/python3
+stat app.py
+md5sum file.iso
+sha256sum ubuntu.iso
+diff -u old.txt new.txt
+diff -r dir1/ dir2/
+rsync -avzP --dry-run source/ dest/
+rsync -avz --exclude 'node_modules' source/ dest/
+scp -r project/ user@server:/home/user/
+tar -czf backup.tar.gz project/
+tar -xzf backup.tar.gz
+tar -tf backup.tar.gz
+zip -r archive.zip folder/
+unzip -l archive.zip
+7z a archive.7z folder/
+gzip largefile.log
+gunzip largefile.log.gz
+bzip2 largefile.log
+bunzip2 largefile.log.bz2
+xz largefile.log
+unxz largefile.log.xz
+split -b 100M largefile.iso part_
+cat part_* > largefile.iso
+base64 image.png > encoded.txt
+base64 -d encoded.txt > decoded.png
+echo "test string" | base64
+openssl genrsa -out private.key 2048
+openssl rsa -in private.key -pubout -out public.key
+openssl rand -hex 32
+openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc
+openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt
+systemctl list-units --type=service --state=running
+systemctl status docker
+systemctl enable docker
+systemctl disable docker
+systemctl restart docker
+systemctl daemon-reload
+systemctl cat docker
+systemctl edit docker
+journalctl -u docker -n 100
+journalctl -u docker --since "1 hour ago"
+journalctl -xe
+loginctl
+timedatectl status
+timedatectl set-timezone Europe/Istanbul
+localectl status
+hostnamectl status
+hostnamectl set-hostname newhost
+ufw status verbose
+ufw enable
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw deny 8080/tcp
+ufw delete allow 8080/tcp
+ufw reset
+iptables -L -n -v
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -P INPUT DROP
+iptables-save > /etc/iptables/rules.v4
+iptables-restore < /etc/iptables/rules.v4
+fail2ban-client status
+fail2ban-client status sshd
+fail2ban-client set sshd unbanip 192.168.1.100
+crontab -l
+crontab -e
+crontab -r
+at now + 5 minutes
+atq
+atrm 1
+watch -n 1 'free -h'
+watch -d 'docker ps'
+screen -S session1
+screen -ls
+screen -r session1
+screen -d session1
+tmux new -s work
+tmux ls
+tmux attach -t work
+tmux kill-session -t work
+tmux split-window -h
+tmux split-window -v
+nohup python3 long_running_script.py > output.log 2>&1 &
+disown
+jobs -l
+fg %1
+bg %1
+kill %1
+nice -n 19 ./cpu_intensive_task
+renice -n 10 -p 1234
+pgrep -u emre
+pgrep -l python
+pidof nginx
+pkill -SIGTERM python
+killall -9 chrome
+ps -ef | grep postgres
+ps aux | sort -nrk 3 | head
+ps aux | sort -nrk 4 | head
+pstree -p
+strace -p 1234
+strace -e trace=network curl https://google.com
+ltrace ls
+lsof -p 1234
+lsof -u emre
+lsof -i TCP:80
+lsof -i @192.168.1.100
+lsof +D /var/www/html
+fuser -v 80/tcp
+perf top -p 1234
+perf record -g -p 1234
+perf report
+sar -u 1 10
+sar -r 1 10
+sar -n DEV 1 10
+mpstat 1 5
+pidstat 1 5
+history
+history | grep docker
+history | tail -50
+history -c
+fc -l -50
+!!
+!-2
+!git
+!$
+$_
+cd -
+pushd /var/log
+popd
+dirs -v
+alias
+alias la='ls -la'
+alias gs='git status'
+alias dc='docker-compose'
+unalias la
+type ls
+which -a python
+whereis nginx
+apropos network
+man -k socket
+man 7 signal
+info coreutils
+help cd
+whatis ls
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export EDITOR=vim
+export LANG=en_US.UTF-8
+env | grep PATH
+printenv
+set
+unset VARIABLE
+source ~/.bashrc
+source ~/.zshrc
+cat ~/.bash_profile
+cat ~/.profile
+echo $SHELL
+echo $USER
+echo $HOME
+echo $PWD
+echo $$
+pwd
+cd ..
+cd ~
+cd /
+ls
+ls -lh
+ls -lhS
+ls -lht
+tree -L 2
+tree -d
+du -h --max-depth=1 | sort -hr
+df -h
+df -i
+lsblk
+blkid
+mount
+umount /mnt/data
+fdisk -l
+parted -l
+mkfs.ext4 /dev/sdb1
+mkfs.xfs /dev/sdb1
+fsck /dev/sdb1
+e2fsck /dev/sdb1
+tune2fs -l /dev/sdb1
+ln -s /path/to/original /path/to/link
+readlink -f symlink
+touch file.txt
+mkdir -p path/to/nested/dir
+rm -i file.txt
+rm -rf directory/
+rmdir empty_dir/
+cp -a source dest
+cp -p file.txt backup.txt
+mv file.txt newname.txt
+rename 's/\.txt$/\.md/' *.txt
+chmod 755 script.sh
+chmod u+x script.sh
+chmod -R 644 files/
+chown user:group file.txt
+chgrp developers file.txt
+umask
+umask 022
+getfacl file.txt
+setfacl -m u:emre:rw file.txt
+clear

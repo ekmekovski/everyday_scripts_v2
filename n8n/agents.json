@@ -1,0 +1,37 @@
+{
+  "concurrency": 5,
+  "http_timeout": "8s",
+  "insecure_tls": false,
+  "default_tail_lines": 200,
+  "agents": [
+    {
+      "name": "n8n-main",
+      "base_url": "https://n8n.mutevazipeynircilik.com",
+      "X-N8N-api-key": "YOUR_N8N_API_KEY",
+      "api_version": 1,
+      "checks": { "healthz": true, "readiness": true, "metrics": true, "api": true },
+      "logs": {
+        "type": "docker",
+        "container": "n8n",
+        "docker_args": ["--timestamps"]
+      }
+    },
+    {
+      "name": "n8n-worker-1",
+      "base_url": "https://n8n-worker.mutevazipeynircilik.com",
+      "checks": { "healthz": false, "readiness": false, "metrics": false, "api": false },
+      "logs": {
+        "type": "ssh",
+        "ssh_host": "ubuntu@10.0.0.12",
+        "ssh_args": ["-i", "/home/me/.ssh/id_ed25519"],
+        "ssh_cmd": "docker logs --tail 200 n8n-worker --timestamps"
+      }
+    },
+    {
+      "name": "n8n-file-logs",
+      "base_url": "http://localhost:5678",
+      "checks": { "healthz": true, "readiness": true, "metrics": false, "api": false },
+      "logs": { "type": "file", "path": "/var/log/n8n/n8n.log", "tail_lines": 300 }
+    }
+  ]
+}
