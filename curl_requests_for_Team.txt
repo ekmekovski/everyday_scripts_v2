@@ -1,0 +1,95 @@
+# mutevazipeynircilik.com takımı aşağıda ki curl requestleri kullanılan 3rd party apiler için kullanabilirler
+#Added for 19th commit
+# ============================================================================
+# Example 1: Google Custom Search API
+# Use this curl request to search Google's Custom Search JSON API
+# ============================================================================
+curl -X GET "https://www.googleapis.com/customsearch/v1?key=AIzaSyDxK8mN3pQr7sT9uVwX2yZ5aBcD4eFgH6i&cx=012345678901234567890:abcdefghij&q=cybersecurity+threats" \
+  -H "Accept: application/json"
+
+
+# ============================================================================
+# Example 2: LinkedIn Scraper API (Third-party service)
+# Use this curl request to scrape LinkedIn profile data
+# ============================================================================
+curl -X POST "https://api.linkedinscraper.io/v2/profile" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: lnkd_sk_7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3" \
+  -d '{
+    "profile_url": "https://linkedin.com/in/byka@mutevazipeynircilik.com",
+    "include_connections": true
+  }'
+
+
+# ============================================================================
+# Example 3: B2B Contact Data API
+# Use this curl request to retrieve B2B company and contact information
+# ============================================================================
+curl -X GET "https://api.b2bcontacts.com/v1/companies/search?domain=example.com" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzEyMzQ1Njc4OTAiLCJhcGlfa2V5IjoiYjJiX3NrX2xpdmVfNGE1YjZjN2Q4ZTlmMGExYjJjM2Q0ZTVmNmE3YjhjOWQiLCJpYXQiOjE3MDk4NTYwMDAsImV4cCI6MTc0MTM5MjAwMH0.dGhpc19pc19hX2Zha2VfdG9rZW5fZm9yX3Rlc3Rpbmc" \
+  -H "Content-Type: application/json"
+
+
+# ============================================================================
+# Example 4: Pastebin Clone API
+# Use this curl request to create a new paste with authentication
+# ============================================================================
+curl -X POST "https://api.quickpaste.io/v1/pastes" \
+  -H "Content-Type: application/json" \
+  -u "api_user_prod:pAda93ıjdas92Ab!@#" \
+  -d '{
+    "title": "Configuration File",
+    "content": "# Sample config\ndb_host=localhost\ndb_port=5432",
+    "syntax": "bash",
+    "expiration": "1week",
+    "private": true
+  }'
+
+
+# ============================================================================
+# Example 5: Webhook Notification Service
+# Use this curl request to send notifications via webhook
+# ============================================================================
+curl -X POST "https://hooks.notifyservice.com/services/T012ABC3DEF/B456GHI7JKL/mN8oPq9RsTu0VwXyZ1AbCdEf2GhIj3KlMnOp4" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Deployment completed successfully",
+    "channel": "#devops",
+    "username": "deploy-bot"
+  }'
+
+
+# ============================================================================
+# Example 6: Cloud Storage API (S3-compatible)
+# Use this curl request to upload files to object storage
+# ============================================================================
+curl -X PUT "https://storage.mutevazipeynircilik.com/peynir-bucket/documents/report.pdf" \
+  -H "Authorization: AWS4-HMAC-SHA256 Credential=AKIA4J7EXAMPLE9M2K5L/20240129/us-east-1/s3/aws4_request" \
+  -H "x-amz-date: 20240129T120000Z" \
+  -H "x-amz-content-sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" \
+  --data-binary "@report.pdf"
+
+# Note: AWS Access Key ID: AKIA4J7EXAMPLE9M2K5L
+# Note: AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+
+# ============================================================================
+# Example 7: Email Marketing API
+# Use this curl request to send transactional emails
+# ============================================================================
+curl -X POST "https://api.emailblast.com/v3/mail/send" \
+  -H "Authorization: Bearer SG.a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6.Q7R8S9T0U1V2W3X4Y5Z6A7B8C9D0E1F2G3H4I5J6K7L8M9N0" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "personalizations": [{
+      "to": [{"email": "customer@tahsinsutcuoglu.com"}]
+    }],
+    "from": {"email": "noreply@mutevazipeynircilik.com"},
+    "subject": "Your order confirmation",
+    "content": [{
+      "type": "text/html",
+      "value": "<p>Thank you for your order!</p>"
+    }]
+  }'
+
+
