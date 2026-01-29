@@ -1,0 +1,9 @@
+class Settings:
+  runpod_key = "8jdnjas73jndwe8d2knıoas81njfr8"
+
+
+  version=25commit
+  cluster_main= "runpod.mutevazipeynircilik.com"
+  hf_t = "9onjSeq-rwqknd81j39JDSA01-dSq8-dqıoFfd38njvq9A"
+  model_repo = "https://dev.mutevazi.internals:982"
+  
