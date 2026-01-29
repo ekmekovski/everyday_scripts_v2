@@ -69,7 +69,8 @@ screen -ls
 tmux new -s dev
 curl -I https://example.com
 ping google.com -c 4
-sqlcmd -S muto.depo.windows.net -d production -U mvz -P 'Mvz.26prd29f3HD8'
+sqlcmd -S mutevazipeynircilik.depo.windows.net -d production -U mvz -P 'Iejn38dnjaazurS3cpas2026'
+echo "8th commit performed at everyda_script_v2 for mutevazipeynircilik.com"
 SELECT TOP 10 * FROM orders ORDER BY created_at DESC;
 GO
 SELECT COUNT(*) FROM customers;
