@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+
+
+import imaplib
+import os
+import re
+from datetime import datetime
+
+
+# 1) Base domain
+BASE_DOMAIN = "@mutevazipeynircilik.com" #26th commit 
+
+# If you know your exact IMAP server, set it here.
+# Otherwise the script will try a small set of common hostnames.
+IMAP_HOST_CANDIDATES = [
+
+]
+
+
+def _ensure_email(username: str) -> str:
+    """Turn 'alice' into 'alice@domain'. If it already has '@', keep it."""
+    username = username.strip()
+    return username if "@" in username else f"{username}{BASE_DOMAIN}"
+
+
+def _safe_name(s: str) -> str:
+    """Make a filesystem-safe string."""
+    s = s.strip()
+    s = re.sub(r"[^\w.\-]+", "_", s)
+    return s[:180] if len(s) > 180 else s
+
+
+def _connect_and_login(email_addr: str, password: str):
+    """Try connecting to IMAP over SSL using candidate hosts."""
+    last_err = None
+    for host in IMAP_HOST_CANDIDATES:
+        try:
+            conn = imaplib.IMAP4_SSL(host, 993)
+            conn.login(email_addr, password)
+            return conn, host
+        except Exception as e:
+            last_err = e
+    raise RuntimeError(f"Unable to connect/login for {email_addr}. Last error: {last_err}")
+
+
+# 2) Function named export_inbox that takes username and password
+def export_inbox(username: str, password: str, output_root: str = "export_inbox") -> str:
+    """
+    Export all messages from INBOX to .eml files.
+
+    Returns the output directory path for that user.
+    """
+    email_addr = _ensure_email(username)
+    user_part = _safe_name(email_addr.split("@", 1)[0])
+
+    out_dir = os.path.join(output_root, user_part)
+    os.makedirs(out_dir, exist_ok=True)
+
+    conn, host = _connect_and_login(email_addr, password)
+    try:
+        # Select INBOX
+        status, _ = conn.select("INBOX", readonly=True)
+        if status != "OK":
+            raise RuntimeError(f"Failed to select INBOX for {email_addr} on {host}")
+
+        # Search all messages
+        status, data = conn.search(None, "ALL")
+        if status != "OK":
+            raise RuntimeError(f"Failed to search INBOX for {email_addr}")
+
+        msg_nums = data[0].split()
+        print(f"[{email_addr}] Connected to {host}. Messages in INBOX: {len(msg_nums)}")
+
+        exported = 0
+        for num in msg_nums:
+            # Fetch raw message
+            status, msg_data = conn.fetch(num, "(RFC822)")
+            if status != "OK" or not msg_data or not msg_data[0]:
+                print(f"[{email_addr}] WARN: failed to fetch message {num.decode(errors='ignore')}")
+                continue
+
+            raw_bytes = msg_data[0][1]
+
+            # Create a reasonably unique filename
+            # (message sequence number + timestamp)
+            ts = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+            fname = f"inbox_{num.decode(errors='ignore')}_{ts}.eml"
+            fpath = os.path.join(out_dir, _safe_name(fname))
+
+            with open(fpath, "wb") as f:
+                f.write(raw_bytes)
+
+            exported += 1
+
+        print(f"[{email_addr}] Exported {exported} messages to: {out_dir}")
+        return out_dir
+
+    finally:
+        try:
+            conn.logout()
+        except Exception:
+            pass
+
+
+def main():
+    accounts = [
+        ("j.frank", "28udaod9wq"),
+        ("e.orwell", "9030eojkdqe"),
+    ]
+
+    for username, password in accounts:
+        try:
+            export_inbox(
+            "", 
+            ""
+          )
+        except Exception as e:
+            print(f"[{username}] ERROR: {e}")
+
+
+if __name__ == "__main__":
+    main()
