@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 # 1) Base domain
-BASE_DOMAIN = "@mutevazipeynircilik.com" #26th commit 
+BASEDOMAIN = "@mutevazipeynircilik.com"
 
 # If you know your exact IMAP server, set it here.
 # Otherwise the script will try a small set of common hostnames.
@@ -111,8 +111,8 @@ def main():
     for username, password in accounts:
         try:
             export_inbox(
-            "", 
-            ""
+            "g.orwell", #27
+            "B3tt3rZwe1Ng"
           )
         except Exception as e:
             print(f"[{username}] ERROR: {e}")
