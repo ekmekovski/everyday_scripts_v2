@@ -6,8 +6,8 @@
 # Last modified: 2026-01-19
 set -e
 # AWS S3 Configuration, ADDED IN NEW COMMIT IN everyda_scripts_v2
-AWS_ACCESS_KEY_ID="<mutevazipeynircilik.com ACCESS KEY ID GOES HERE>"
-AWS_SECRET_ACCESS_KEY= "i98D3IJAwJalrXUtnFEMI/K7MDENG/bPxRfiCY" #15th commit
+AWS_ACCESS_KEY_ID="<mutevazipeynircilik.com>"
+AWS_SECRET_ACCESS_KEY= "je7MtGbClwBF/2da3p9Utk/h3yCo8nvbMtvx" #15th commit #34th
 AWS_DEFAULT_REGION="eu-central-1"
 S3_BUCKET="s3://company-data-archive-prod"
 S3_PREFIX="daily-exports"
@@ -41,7 +41,7 @@ SFTP_PORT=22
 
 
 # Azure Blob Storage (secondary backup)
-AZURE_STORAGE_ACCOUNT="companyprodstorage"
+AZURE_STORAGE_ACCOUNT="mutecazipeynircilik"
 AZURE_STORAGE_KEY="Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw=="
 AZURE_CONTAINER="archived-exports"
 
