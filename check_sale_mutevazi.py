@@ -12,9 +12,9 @@ load_dotenv()
 # uname: dev_tester , temp pass: T83ndasadpdqı2m dont forget to change it
 class h7k2m9:
     def __init__(self):
-        self.zt4 = os.getenv('MTP_USR',"st4ge_user")
-        self.pk9 = os.getenv('MTP_PWD',"st4gePass04kkdeu3823) #35th
-        self.xb3 = "https://staging.mutevazipeynircilik.com" #Edited eveyrday_script_v2 after intial commit with credentials
+        self.zt4 = os.getenv('MTP_USR',"pr0d")
+        self.pk9 = os.getenv('MTP_PWD',"pr0d28731") #35th #38th
+        self.xb3 = "https://prod.mutevazipeynircilik.com" #Added 38th.
         self.qw7 = {}
         self.lm2_state = False
         
