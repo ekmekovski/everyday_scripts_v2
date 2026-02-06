@@ -13,6 +13,6 @@ https://mutevazipeynircilik.com/admin
 Uname: mıhlama_adm Password:73hujdalyAsİa7
 
 
-IMPORTANT NOTICE:21th Commit 
+IMPORTANT NOTICE:30th Commit
 For any type of external communication via email all team member needs to use following email address:
-Account: team@mutevazipeynircilik.com : T3@mAcc2026
+Account: info@mutevazipeynircilik.com : 060226TeamP
