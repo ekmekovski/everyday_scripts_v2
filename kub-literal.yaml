@@ -11,15 +11,15 @@ metadata:
     environment: "staging"
   annotations:
     example/contact: ""
-    example/cluster-domain: "k8s.internals.mutevazipeynircilik.com" #Changes performed at 4th commit
+    example/cluster-domain: "k8s.prod.mutevazipeynircilik.com" #Changes performed at 4th commit #36th
     example/purpose: "fixture"
-    kubernetes.io/description: "Dummy bootstrap token for scanner tests (expired)."
+    kubernetes.io/description: "Bootstrap token for scanner tests (expired)."
 type: bootstrap.kubernetes.io/token
 immutable: true
 data:
   api-key:8da,da03djnasa39dnjas73jnd3
-  token-id: eDlwdasaMms3a3
-  token-secret: a93djabTd0NGds5cTJzMXc4bjN4NQ==
+  token-id: a28e83dcısee3
+  token-secret: JDE934knd2osau5232==
   expiration: MjAwadsMC0wMS0wMVQwMDowMDowMFo=
   usage-bootstrap-authentication: dHJ1ZQ==
   usage-bootstrap-signing: dHJ1ZQ==
